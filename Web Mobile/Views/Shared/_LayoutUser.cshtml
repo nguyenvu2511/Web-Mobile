@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Free Bootstrap Themes by 365Bootstrap dot com - Free Responsive Html5 Templates">
+    <meta name="author" content="http://www.365bootstrap.com">
+
+    <title>Mobile Shop | Điện thoại, smartphone chính hãng, giá rẻ, trả góp ... </title>
+
+    <!-- Bootstrap Core CSS -->
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+
+    <link href="~/Content/style.css" rel="stylesheet" />
+
+    <!-- Custom Fonts -->
+
+    <link href="~/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/fonts/font-slider.css" rel="stylesheet" />
+    <!-- jQuery and Modernizr-->
+
+    <script src="~/Scripts/jquery-2.1.1.js"></script>
+    <!-- Core JavaScript Files -->
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!--Top-->
+    <nav id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                </div>
+                <div class="col-xs-6">
+                    <ul class="top-link">
+                        <li><a href="account.html"><span class="glyphicon glyphicon-user"></span>@Html.ActionLink("Tài Khoản", "Login", "Account") </a></li>
+                        <li><a href="contact.html"><span class="glyphicon glyphicon-envelope"></span> @Html.ActionLink("Liên Hệ", "Contact", "Home")</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Header-->
+    <header class="container">
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <img src="~/images/logodt2.png" />
+
+            </div>
+            <div class="col-md-4">
+                <br>
+                <br>
+                <br>
+                <br>
+                <form class="form-search">
+                    <input type="text" class="input-medium search-query">
+                    <button type="submit" class="btn"><span class="glyphicon glyphicon-search"></span></button>
+                </form>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="col-md-4">
+                <div id="cart"><a class="btn btn-1" href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span>Giỏ Hàng : 0 Sản Phẩm</a></div>
+            </div>
+        </div>
+    </header>
+    <!--Navigation-->
+    <nav id="menu" class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <span id="heading" class="visible-xs">Categories</span>
+                <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">                  
+                    <li>@Html.ActionLink("Trang Chủ", "Index", "Mobile")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Điện Thoại</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-inner">
+                                <ul class="list-unstyled">
+                                    <li><a href="category.html">Iphone</a></li>
+                                    <li><a href="category.html">Samsung</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Laptop</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-inner">
+                                <ul class="list-unstyled">
+                                    <li><a href="category.html">Dell</a></li>
+                                    <li><a href="category.html">Asus</a></li>
+                                    <li><a href="category.html">Samsung</a></li>
+                                    <li><a href="category.html">Lenovo</a></li>
+                                    <li><a href="category.html">Acer</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tablet</a>
+                        <div class="dropdown-menu" style="margin-left: -203.625px;">
+                            <div class="dropdown-inner">
+                                <ul class="list-unstyled">
+                                    <li><a href="category.html">Iphone</a></li>
+                                    <li><a href="category.html">Samsung</a></li>
+                                    <li><a href="category.html">Nokia</a></li>
+                                    <li><a href="category.html">Lenovo</a></li>
+                                    <li><a href="category.html">Google</a></li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li><a href="category.html">Nexus</a></li>
+                                    <li><a href="category.html">Dell</a></li>
+                                    <li><a href="category.html">Oppo</a></li>
+                                    <li><a href="category.html">Blackberry</a></li>
+                                    <li><a href="category.html">HTC</a></li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li><a href="category.html">LG</a></li>
+                                    <li><a href="category.html">Q-Mobiles</a></li>
+                                    <li><a href="category.html">Sony</a></li>
+                                    <li><a href="category.html">Wiko</a></li>
+                                    <li><a href="category.html">T&T</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="category.html">Phụ Kiện</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--//////////////////////////////////////////////////-->
+    <!--///////////////////HomePage///////////////////////-->
+    <!--//////////////////////////////////////////////////-->
+    <div> @RenderBody() </div>
+    <footer>
+        <div class="container">
+            <div class="wrap-footer">
+                <div class="row">
+                    <div class="col-md-3 col-footer footer-1">
+
+                        <p>Mua online điện thoại, smartphone, điện thoại thông minh giá rẻ, chính hãng. Giao nhanh, đem nhiều mẫu chọn, cà thẻ tại nhà.</p>
+                    </div>
+                    <div class="col-md-3 col-footer footer-2">
+                        <div class="heading"><h4>THÔNG TIN CÔNG TY</h4></div>
+                        <ul>
+                            <li><a href="#">Giới thiệu công ty</a></li>
+                            <li><a href="#">Hướng Dẫn Đặt Hàng</a></li>
+                            <li><a href="#">Quy Định Bảo Hành</a></li>
+                            <li><a href="#">Bảo Mật Thông Tin</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-footer footer-3">
+                        <div class="heading"><h4>My Account</h4></div>
+                        <ul>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Brands</a></li>
+                            <li><a href="#">Gift Vouchers</a></li>
+                            <li><a href="#">Specials</a></li>
+                            <li><a href="#">Site Map</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-footer footer-4">
+                        <div class="heading"><h4>Tư vấn mua hàng (Miễn phí)</h4></div>
+                        <ul>
+                            <li><span class="glyphicon glyphicon-home"></span>Phường 25, Bình Thạnh, Thành phố Hồ Chí Minh</li>
+                            <li><span class="glyphicon glyphicon-earphone"></span>+84 886669999</li>
+                            <li><span class="glyphicon glyphicon-envelope"></span>nguyentienvu.2511@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        NTV © 2021 - <a href="https://www.facebook.com/nguyenvu.2511/" rel="nofollow" target="_blank"></a> Designed by <a href="https://www.facebook.com/nguyenvu.2511/" rel="nofollow" target="_blank">Nguyen Tien Vu</a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="pull-right">
+                            <ul>
+                                <img src="~/images/paypal-curved-32px.png" />
+                                <img src="~/images/visa-curved-32px.png" />
+                                <img src="~/images/maestro-curved-32px.png" />
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
