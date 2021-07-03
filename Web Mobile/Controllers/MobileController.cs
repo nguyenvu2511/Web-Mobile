@@ -28,7 +28,6 @@ namespace Shop_Mobile.Controllers
             }
             
         }
-
         public ActionResult Details(int id)
         {
             var sanPhams = from s in data.SanPhams
@@ -39,7 +38,10 @@ namespace Shop_Mobile.Controllers
 
 
         }
+        public ActionResult Contact()
+        {
 
-
+            return View();
+        }
     }
 }
