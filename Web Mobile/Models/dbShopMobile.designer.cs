@@ -367,8 +367,6 @@ namespace Web_Mobile.Models
 		
 		private string _Hinh3;
 		
-		private string _Hinh4;
-		
 		private System.Nullable<System.DateTime> _Ngaycapnhat;
 		
 		private System.Nullable<int> _Soluongton;
@@ -403,8 +401,6 @@ namespace Web_Mobile.Models
     partial void OnHinh2Changed();
     partial void OnHinh3Changing(string value);
     partial void OnHinh3Changed();
-    partial void OnHinh4Changing(string value);
-    partial void OnHinh4Changed();
     partial void OnNgaycapnhatChanging(System.Nullable<System.DateTime> value);
     partial void OnNgaycapnhatChanged();
     partial void OnSoluongtonChanging(System.Nullable<int> value);
@@ -579,26 +575,6 @@ namespace Web_Mobile.Models
 					this._Hinh3 = value;
 					this.SendPropertyChanged("Hinh3");
 					this.OnHinh3Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Hinh4", DbType="VarChar(50)")]
-		public string Hinh4
-		{
-			get
-			{
-				return this._Hinh4;
-			}
-			set
-			{
-				if ((this._Hinh4 != value))
-				{
-					this.OnHinh4Changing(value);
-					this.SendPropertyChanging();
-					this._Hinh4 = value;
-					this.SendPropertyChanged("Hinh4");
-					this.OnHinh4Changed();
 				}
 			}
 		}

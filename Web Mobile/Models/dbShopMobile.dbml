@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ShopMobile" Class="dbShopMobileDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-6FD628N\ECUSSQL2008;Initial Catalog=ShopMobile;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ShopMobileConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-MC\LOCAL;Initial Catalog=ShopMobile;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ShopMobileConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CHITIETDONTHANG" Member="CHITIETDONTHANGs">
     <Type Name="CHITIETDONTHANG">
       <Column Name="MaDH" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -20,7 +20,6 @@
       <Column Name="Hinh1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Hinh2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Hinh3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Hinh4" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Ngaycapnhat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="Soluongton" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaLSP" Type="System.Int32" DbType="Int" CanBeNull="true" />

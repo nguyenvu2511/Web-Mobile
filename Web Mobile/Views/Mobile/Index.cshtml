@@ -65,20 +65,36 @@
             </div>
         </div>
         <div class="heading">
-            <h2>ĐIỆN THOẠI NỔI BẬT NHẤT</h2>
+            <h2>ĐIỆN THOẠI MỚI NHẤT</h2>
             @foreach (var dt in Model.Where(a => a.MaLSP == 1))
             {
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="product">
-                        <div class="image"><a href="@Url.Action("Details", "Mobile", new { id = dt.MaSP })"><img src="~/images/@dt.HinhChinh"    /></a></div>
-                        <div class="buttons">
-                            <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-                            <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
-                            <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
-                        </div>
+                        <div class="image"><a href="@Url.Action("Details", "Mobile", new { id = dt.MaSP })"><img src="~/images/@dt.HinhChinh" width="250" height="300"/></a></div>
                         <div class="caption">
                             <div class="name"><h3><a href="@Url.Action("Details","Mobile",new { id = dt.MaSP })">@dt.TenSP</a></h3></div>
-                            <div class="price">@String.Format(format, "{0:c0}", dt.Giaban)</div>
+                            <div class="price">@String.Format(format, "{0:c0}", dt.Giaban)<span></span></div>
+                            <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="row">
+            <div class="banner">
+                <center><img src="~/images/iphonebh.png" /></center>
+            </div>
+        </div>
+        <div class="heading">
+            <h2>IPHONE NỔI BẬT</h2>
+            @foreach (var dt in Model.Where(a => a.MaNSX == 1 && a .MaLSP ==1))
+            {
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="product">
+                        <div class="image"><a href="@Url.Action("Details", "Mobile", new { id = dt.MaSP })"><img src="~/images/@dt.HinhChinh" width="250" height="300" /></a></div>
+                        <div class="caption">
+                            <div class="name"><h3><a href="@Url.Action("Details","Mobile",new { id = dt.MaSP })">@dt.TenSP</a></h3></div>
+                            <div class="price">@String.Format(format, "{0:c0}", dt.Giaban)<span></span></div>
                             <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
                         </div>
                     </div>
@@ -91,17 +107,12 @@
             </div>
         </div>
         <div class="heading">
-            <h2>LAPTOP NỔI BẬT NHẤT</h2>
-            @foreach (var dt in Model.Where(a => a.MaLSP == 2))
+            <h2>SAMSUNG NỔI BẬT</h2>
+            @foreach (var dt in Model.Where(a => a.MaNSX == 2 && a.MaLSP == 1))
             {
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="product">
-                        <div class="image"><a href="@Url.Action("Details", "Mobile", new { id = dt.MaSP })"><img src="~/images/@dt.HinhChinh"width="250" height="300" /></a></div>
-                        <div class="buttons">
-                            <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-                            <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
-                            <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
-                        </div>
+                        <div class="image"><a href="@Url.Action("Details", "Mobile", new { id = dt.MaSP })"><img src="~/images/@dt.HinhChinh" width="250" height="300" /></a></div>
                         <div class="caption">
                             <div class="name"><h3><a href="@Url.Action("Details","Mobile",new { id = dt.MaSP })">@dt.TenSP</a></h3></div>
                             <div class="price">@String.Format(format, "{0:c0}", dt.Giaban)<span></span></div>
@@ -111,6 +122,7 @@
                 </div>
             }
         </div>
+
     </div>
 </div>
 
