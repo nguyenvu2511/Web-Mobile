@@ -75,7 +75,7 @@
             <br>
             <br>
             <div class="col-md-4">
-                <div id="cart"><a class="btn btn-1" href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span>Giỏ Hàng : 0 Sản Phẩm</a></div>
+                @Html.Action("Giohangpartial", "Giohang")
             </div>
         </div>
     </header>
@@ -87,32 +87,12 @@
                 <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">                  
+                <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Trang Chủ", "Index", "Mobile")</li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Điện Thoại</a>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-inner">
-                                <ul class="list-unstyled">
-
-                                </ul>
-                            </div>
-                        </div>
+                        <a href="@Url.Action("DienThoai", "Mobile")">Điện Thoại</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nhà Sản Xuất</a>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-inner">
-                                <ul class="list-unstyled">
-                                    <li><a href="category.html">Iphone</a></li>
-                                    <li><a href="category.html">Samsung</a></li>
-                                    <li><a href="category.html">Oppo</a></li>
-                                    <li><a href="category.html">Xiaomi</a></li>
-                                    <li><a href="category.html">Asus</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
+                    @Html.Action("NhaSanXuat", "Mobile")
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tablet</a>
 

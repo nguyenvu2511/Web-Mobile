@@ -4,7 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Web_Mobile.Models;
-
+using PagedList;
+using PagedList.Mvc;
 namespace Shop_Mobile.Controllers
 {
     public class MobileController : Controller
@@ -42,6 +43,28 @@ namespace Shop_Mobile.Controllers
         {
 
             return View();
+        }
+        public ActionResult DienThoai(int? page)
+        {
+            int pageSize = 8;
+            int pageNum = (page ?? 1);
+            var dt = Layspmoi(15);
+            return View(dt.ToPagedList(pageNum, pageSize));
+        }
+
+        public ActionResult NhaSanXuat()
+        {
+            var nsx = from s in data.NhaSanXuats select s;
+
+            return PartialView(nsx);
+        }
+        public ActionResult SPTheoNSX(int? page, int id)
+        {
+            int pageSize = 8;
+            int pageNum = (page ?? 1);
+            var sp = from s in data.SanPhams where s.MaNSX == id select s;
+
+            return View(sp.ToPagedList(pageNum, pageSize));
         }
     }
 }

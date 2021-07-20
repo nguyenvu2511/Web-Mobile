@@ -322,3 +322,7 @@ C:\Users\Admin\Documents\Web Mobile\Web Mobile\bin\Microsoft.Owin.Security.OAuth
 C:\Users\Admin\Documents\Web Mobile\Web Mobile\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Admin\Documents\Web Mobile\Web Mobile\obj\Debug\Web Mobile.csproj.CopyComplete
 C:\Users\Admin\Documents\Web Mobile\Web Mobile\obj\Debug\Web Mobile.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\Web Mobile\Web Mobile\bin\PagedList.dll
+C:\Users\Admin\Documents\Web Mobile\Web Mobile\bin\PagedList.Mvc.dll
+C:\Users\Admin\Documents\Web Mobile\Web Mobile\bin\PagedList.xml
+C:\Users\Admin\Documents\Web Mobile\Web Mobile\bin\PagedList.Mvc.xml
