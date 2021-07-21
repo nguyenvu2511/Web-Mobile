@@ -13,7 +13,6 @@
 }
 <div id="page-content" class="home-page">
     <div class="container">
-
         <div class="heading">
             @foreach (var dt in Model)
             {
@@ -29,7 +28,7 @@
                 </div>
             }
         </div>
-
+        <div class="row"
         <div class="heading">
             @* Tao liên kết các trang  *@
             Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount
@@ -43,8 +42,8 @@
                 }
             </style>
         </div>
+        </div>
 
     </div>
 
 </div>
-

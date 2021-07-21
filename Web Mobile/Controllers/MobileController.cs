@@ -13,9 +13,9 @@ namespace Shop_Mobile.Controllers
         // GET: Mobile
         public ActionResult Index()
         {
-            var dtmoi = Layspmoi(8);
-            
-                return View(dtmoi);
+            var dt = data.SanPhams.ToList();
+
+            return View(dt);
             
             
         }
@@ -23,12 +23,11 @@ namespace Shop_Mobile.Controllers
 
         private List<SanPham> Layspmoi(int count)
         {
-            var dt = data.LoaiSanPhams.Where(p => p.MaLSP==1).ToList();
-            {
+     
                 return data.SanPhams.OrderByDescending(a => a.Ngaycapnhat).Take(count).ToList();
-            }
             
         }
+
         public ActionResult Details(int id)
         {
             var sanPhams = from s in data.SanPhams
@@ -48,7 +47,7 @@ namespace Shop_Mobile.Controllers
         {
             int pageSize = 8;
             int pageNum = (page ?? 1);
-            var dt = Layspmoi(15);
+            var dt = data.SanPhams.ToList();
             return View(dt.ToPagedList(pageNum, pageSize));
         }
 
@@ -62,8 +61,7 @@ namespace Shop_Mobile.Controllers
         {
             int pageSize = 8;
             int pageNum = (page ?? 1);
-            var sp = from s in data.SanPhams where s.MaNSX == id select s;
-
+            var sp = data.SanPhams.Where(a => a.MaNSX == id);
             return View(sp.ToPagedList(pageNum, pageSize));
         }
     }

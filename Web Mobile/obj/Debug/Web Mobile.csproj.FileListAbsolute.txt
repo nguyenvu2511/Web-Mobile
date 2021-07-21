@@ -433,8 +433,8 @@ C:\Users\Admin\Documents\Web-Mobile\Web Mobile\bin\Microsoft.Owin.Security.Twitt
 C:\Users\Admin\Documents\Web-Mobile\Web Mobile\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Admin\Documents\Web-Mobile\Web Mobile\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Admin\Documents\Web-Mobile\Web Mobile\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Admin\Documents\Web-Mobile\Web Mobile\obj\Debug\Web Mobile.csproj.AssemblyReference.cache
 C:\Users\Admin\Documents\Web-Mobile\Web Mobile\obj\Debug\Web Mobile.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\Web-Mobile\Web Mobile\obj\Debug\Web Mobile.csproj.CopyComplete
 C:\Users\Admin\Documents\Web-Mobile\Web Mobile\obj\Debug\Web Mobile.dll
 C:\Users\Admin\Documents\Web-Mobile\Web Mobile\obj\Debug\Web Mobile.pdb
+C:\Users\Admin\Documents\Web-Mobile\Web Mobile\obj\Debug\Web Mobile.csproj.AssemblyReference.cache

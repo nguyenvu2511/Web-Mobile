@@ -52,7 +52,7 @@ namespace Shop_Mobile.Controllers
             }
             if (String.IsNullOrEmpty(email))
             {
-                ViewData["Loi5"] = "email không được để trống";
+                ViewData["Loi5"] = "Email không được để trống";
             }
             if (String.IsNullOrEmpty(diachi))
             {
@@ -60,7 +60,11 @@ namespace Shop_Mobile.Controllers
             }
             if (String.IsNullOrEmpty(DienThoai))
             {
-                ViewData["Loi7"] = "phải nhập số Điện Thoại";
+                ViewData["Loi7"] = "Phải nhập số Điện Thoại";
+            }
+            if (String.IsNullOrEmpty(ngaysinh))
+            {
+                ViewData["Loi7"] = " Phải nhập ngày sinh";
             }
             else
             {
@@ -114,5 +118,11 @@ namespace Shop_Mobile.Controllers
             }
             return View();
         }
+        public ActionResult DangXuat()
+        {
+            Session.Clear();
+            return RedirectToAction("Index", "Mobile");
+        }
+      
     }
 }
