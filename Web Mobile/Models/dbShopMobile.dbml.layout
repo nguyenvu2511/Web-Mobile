@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.75" name="dbShopMobile">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.125, 8.75" name="dbShopMobile">
   <DataContextMoniker Name="/dbShopMobileDataContext" />
   <nestedChildShapes>
     <classShape Id="d02159c4-c36b-4fbc-87a0-4e210c51d113" absoluteBounds="6.25, 2.5, 2, 1.578595377604167">
@@ -38,7 +38,7 @@
         <elementListCompartment Id="f20c905a-aab2-42b3-abfe-33739ab9e348" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5.5 : 3.28929768880208); (6.25 : 3.28929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 3.28929768880208); (6.25 : 3.28929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/dbShopMobileDataContext/SanPham/SanPham_CHITIETDONTHANG" />
       <nodes>
         <classShapeMoniker Id="7f7ad681-1676-43ba-a515-f53c49a3a78a" />
@@ -59,7 +59,7 @@
         <classShapeMoniker Id="e21d830e-73cc-473c-907f-c510b1779d72" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 3.34699625651042); (3.5 : 3.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 3.34699625651042); (3.5 : 3.34699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/dbShopMobileDataContext/LoaiSanPham/LoaiSanPham_SanPham" />
       <nodes>
         <classShapeMoniker Id="dd1517c4-148a-47d9-a8af-c3a06c437314" />
@@ -73,5 +73,11 @@
         <classShapeMoniker Id="7f7ad681-1676-43ba-a515-f53c49a3a78a" />
       </nodes>
     </associationConnector>
+    <classShape Id="3587be50-8593-4431-9a40-9247c8de2655" absoluteBounds="10.875, 3.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/dbShopMobileDataContext/Admin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1c206e4-aeea-4ad8-af25-1d8f22af3de2" absoluteBounds="10.89, 3.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>
