@@ -1,0 +1,65 @@
+﻿@model Web_Mobile.Models.DONDATHANG
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>CHI TIẾT ĐƠN ĐẶT HÀNG</h3>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã ĐH :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaDH)
+        </dd>
+        <dt>
+            Tên KH :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KHACHHANG.HoTen)
+        </dd>
+        <dt>
+            Ngày Đặt :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngaydat)
+        </dd>
+
+        <dt>
+            Ngày Giao :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngaygiao)
+        </dd>
+        <dt>
+            Tình Trạng Thanh Toán :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dathanhtoan)
+        </dd>
+
+        <dt>
+            Tình Trạng Giao Hàng :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tinhtranggiaohang)
+        </dd>
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.MaDH }) |
+    @Html.ActionLink("Trở về", "Index")
+</p>

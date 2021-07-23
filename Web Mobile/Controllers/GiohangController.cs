@@ -160,7 +160,7 @@ namespace Web_Mobile.Controllers
                 ViewData["Loi1"] = " Phải nhập ngày giao hàng";
             }
             else
-            ddh.Ngaygiao = DateTime.Parse(ngaygiao);
+                ddh.Ngaygiao = DateTime.Parse(ngaygiao);
             ddh.Tinhtranggiaohang = false;
             ddh.Dathanhtoan = false;
             data.DONDATHANGs.InsertOnSubmit(ddh);

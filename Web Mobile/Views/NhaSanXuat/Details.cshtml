@@ -1,0 +1,27 @@
+﻿@model Web_Mobile.Models.NhaSanXuat
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chi Tiết</h2>
+
+<div>
+    <h4>Nhà Sản Xuất</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên Nhà Sản Xuất :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNSX)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.MaNSX }) |
+    @Html.ActionLink("Trở về", "Index")
+</p>
