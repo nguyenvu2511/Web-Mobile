@@ -13,7 +13,7 @@ namespace Shop_Mobile.Controllers
         // GET: Mobile
         public ActionResult Index()
         {
-            var dt = data.SanPhams.ToList();
+            var dt = data.SanPhams.Where(a=>a.MaLSP==1).ToList();
 
             return View(dt);
             

@@ -1,37 +1,63 @@
 ﻿
 @{
-    ViewBag.Title = "DangNhap";
-    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    Layout = null;
 }
-<h4 style="color:red; text-align:center"> @ViewBag.ThongBao</h4>
-<table align="center">
 
-    <h3 style="text-align:center">Đăng Nhập</h3>
-    @using (Html.BeginForm())
-    {
-        @Html.ValidationSummary(true)
-        <tr style="height:40px">
-            <td> Tên đăng nhập :</td>
-            <td>
-                @Html.TextBox("TenDN")
-                @ViewData["Loi1"]
-            </td>
-        </tr>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Đăng Nhập Thành Viên</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <tr style="height:40px">
-            <td style="right"> Mật Khẩu :</td>
-            <td>
-                @Html.Password("MatKhau")
-                @ViewData["Loi2"]
-            </td>
-        </tr>
-        <tr style="height:20px">
-            <td></td>
-            <td>
-                <input type="submit" class="btn btn-1" value="Đăng Nhập" />
-            </td>
-        </tr>
-      
-      
-    }
-</table>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="~/assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="img js-fullheight" style="background-image: url('../../assets/images/bg.jpg');">
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">ĐĂNG NHẬP </h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="login-wrap p-0">
+                        <p style="color:red"> @ViewBag.Thongbao</p>
+                        @using (Html.BeginForm())
+                        {
+                            <div class="form-group">
+                                <input type="text" name="TenDN" class="form-control" placeholder="Tài Khoản" required id="form-username">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="MatKhau" class="form-control" placeholder="Mật Khẩu" required id="password-field">
+                                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+                            <button type="submit" class="form-control btn btn-primary submit px-3">Đăng Nhập</button>
+                        }
+                        <div class="form-group d-md-flex">
+                            <div class="w-50">
+                                <label class="checkbox-wrap checkbox-primary">
+                                    Remember Me
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/popper.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/main.js"></script>
+</body>
+</html>
