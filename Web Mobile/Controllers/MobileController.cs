@@ -64,5 +64,13 @@ namespace Shop_Mobile.Controllers
             var sp = data.SanPhams.Where(a => a.MaNSX == id);
             return View(sp.ToPagedList(pageNum, pageSize));
         }
+
+        public ActionResult PhuKien(int? page)
+        {
+            int pageSize = 8;
+            int pageNum = (page ?? 1);
+            var sp = data.SanPhams.Where(a => a.MaLSP == 3);
+            return View(sp.ToPagedList(pageNum, pageSize));
+        }
     }
 }
