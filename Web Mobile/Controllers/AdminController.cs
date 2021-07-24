@@ -55,5 +55,13 @@ namespace Web_Mobile.Controllers
             Session.Clear();
             return RedirectToAction("Login", "Admin");
         }
+
+        public ActionResult TaiKhoan()
+        {
+            if (Session["Taikhoanadmin"] == null)
+                return RedirectToAction("Login", "Admin");
+            else
+                return View(data.Admins.ToList());
+        }
     }
 }
