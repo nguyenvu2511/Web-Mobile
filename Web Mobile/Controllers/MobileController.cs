@@ -47,10 +47,9 @@ namespace Shop_Mobile.Controllers
         {
             int pageSize = 8;
             int pageNum = (page ?? 1);
-            var dt = data.SanPhams.ToList();
+            var dt = data.SanPhams.Where(a => a.MaLSP==1).ToList();
             return View(dt.ToPagedList(pageNum, pageSize));
         }
-
         public ActionResult NhaSanXuat()
         {
             var nsx = from s in data.NhaSanXuats select s;
