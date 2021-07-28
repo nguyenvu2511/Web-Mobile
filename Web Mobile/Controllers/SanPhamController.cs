@@ -182,7 +182,6 @@ namespace Web_Mobile.Controllers
                     }
                     sanPham.HinhChinh = fileName;
                     //Luu vao CSDL
-
                     UpdateModel(sanPham);
                     data.SubmitChanges();
                 }

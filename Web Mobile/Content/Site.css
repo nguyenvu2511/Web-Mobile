@@ -15,7 +15,13 @@
 .dl-horizontal dt {
     white-space: normal;
 }
-
+.featured-promotion {
+    color: #333;
+    background: #ffde81;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-bottom: 15px;
+}
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,

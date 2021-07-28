@@ -1,59 +1,81 @@
 ﻿
 @{
-    ViewBag.Title = "DangKy";
-    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    Layout = null;
 }
-<table align="center">
-    <h2 style="text-align:center">Đăng Ký Thành Viên</h2>
-    @using (Html.BeginForm())
-    {
-        @Html.ValidationSummary(true)
-        <tr style="height:40px">
-            <td> Họ Tên Khách Hàng</td>
 
-            <td>@Html.TextBox("HoTenKH")@ViewData["Loi1"]</td>
-        </tr>
 
-        <tr style="height:40px">
-            <td> Tên Đăng Nhập</td>
-            <td>@Html.TextBox("TenDN")@ViewData["Loi2"]</td>
-        </tr>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Đăng Ký</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <tr style="height:40px">
-            <td> Mật Khẩu</td>
-            <td>@Html.Password("MatKhau")@ViewData["Loi3"]</td>
-        </tr>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
-        <tr style="height:40px">
-            <td>Nhập Lại Mật Khẩu</td>
-            <td>@Html.Password("MatKhauNhapLai")@ViewData["Loi4"]</td>
-        </tr>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <tr style="height:40px">
-            <td>Email</td>
-            <td>@Html.TextBox("Email")@ViewData["Loi5"]</td>
-        </tr>
-        <tr style="height:40px">
-            <td>Địa chỉ</td>
-            <td>@Html.TextBox("Diachi")@ViewData["Loi5"]</td>
-        </tr>
-        <tr style="height:40px">
-            <td>Điện Thoại</td>
-            <td>@Html.TextBox("DienThoai")@ViewData["Loi6"]</td>
-        </tr>
+    <link href="~/assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="img js-fullheight" style="background-image: url('../../images/bg1.jpg'); background-size: cover">
 
-        <tr style="height:40px">
-            <td>Ngày Sinh</td>
-            <td>
-                <input type="date" name="NgaySinh" />@ViewData["Loi7"]
-            </td>
-        </tr>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">ĐĂNG KÝ</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="login-wrap p-0">
+                        <p style="color:red"> @ViewBag.Thongbao</p>
+                        @using (Html.BeginForm())
+                        {   
+                             @Html.ValidationSummary(true)
+                            <a>Họ Tên</a>
+                            <div class="form-group">
+                                <input type="text" name="HoTenKH" class="form-control"  required id="form" style="height:40px">
+                            </div>
+                            <a>Tên Đăng Nhập</a>
+                            <div class="form-group">
+                                <input type="text" name="TenDN" class="form-control" required id="form-username"  style="height:40px">
+                            </div>
+                            <a>Mật Khẩu</a>
+                            <div class="form-group">
+                                <input type="password" name="MatKhau" class="form-control" required id="password-field" style="height:40px">
+                                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+                            <a>Nhập Lại Mật Khẩu</a>
+                            <div class="form-group">
+                                <input type="password" name="MatKhauNhapLai" class="form-control" required id="password-field" style="height:40px">
+                                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+                             <a>Email</a>
+                            <div class="form-group">
+                                <input type="text" name="Email" class="form-control" required id="form-mail" style="height:40px">
+                            </div>
+                            <a>Địa Chỉ</a>
+                            <div class="form-group">
+                                <input type="text" name="Diachi" class="form-control" required id="form-dc" style="height:40px">
+                            </div>
+                             <a>SĐT</a>
+                            <div class="form-group">
+                                <input type="text" name="DienThoai" class="form-control" required id="form-dt"style="height:40px">
+                            </div>
+                            <label class="control-label col-md-2" for="Ngaycapnhat">Ngày Sinh</label>
+                            <input type="date" name="NgaySinh" />@ViewData["Loi7"]
 
-        <tr style="height:40px">
-            <td></td>
-            <td>
-                <input type="submit" value="Đăng Ký" />
-            </td>
-        </tr>
-    }
-</table>
+                            <button type="submit" class="form-control btn btn-primary submit px-3">Đăng Ký</button>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/popper.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/main.js"></script>
+</body>
+</html>

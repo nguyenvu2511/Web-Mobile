@@ -61,10 +61,16 @@ namespace Shop_Mobile.Controllers
         {
             int pageSize = 8;
             int pageNum = (page ?? 1);
-            var sp = data.SanPhams.Where(a => a.MaNSX == id);
+            var sp = data.SanPhams.Where(a => a.MaNSX == id && a.MaLSP == 1);
             return View(sp.ToPagedList(pageNum, pageSize));
         }
-
+        public ActionResult Tablet(int? page)
+        {
+            int pageSize = 8;
+            int pageNum = (page ?? 1);
+            var sp = data.SanPhams.Where(a => a.MaLSP == 2);
+            return View(sp.ToPagedList(pageNum, pageSize));
+        }
         public ActionResult PhuKien(int? page)
         {
             int pageSize = 8;
