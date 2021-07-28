@@ -89,7 +89,7 @@
                                 MÀU SẮC
                                 <select>
                                     <option value="" selected>
-                                        ----Xin hãy lựa chọn----
+                                        ----Lựa chọn màu---
                                     </option>
                                     <option value="red">RED</option>
                                     <option value="black">BLACK</option>
@@ -97,18 +97,6 @@
                             </div>
                             <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></div>
                             <div class="well"><label>Số Lượng: </label> <input class="form-inline quantity" type="text" value="1"><a href="@Url.Action("Themgiohang","Giohang", new { id=@Model.MaSP,  strURL= Request.Url.ToString()})" class="btn btn-2 ">MUA NGAY</a></div>
-                            <div class="share well">
-                                <strong style="margin-right: 13px;">Share :</strong>
-                                <a href="#" class="share-btn" target="_blank">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                                <a href="#" class="share-btn" target="_blank">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                                <a href="#" class="share-btn" target="_blank">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-                            </div>
                         </div>
                     </div>
                     <div class="clear"></div>
@@ -121,7 +109,7 @@
                     <div class="tab-content">
                         <div id="description" class="tab-pane fade in active">
 
-                            <p>@Model.Mota</p>
+                            @Model.Mota
 
                         </div>
                         <div id="review" class="tab-pane fade">

@@ -30,10 +30,10 @@
                 </div>
             }
         </div>
-        <div class="row">
-        <div class="heading">
+        <div style="clear:both">
             @* Tao liên kết các trang  *@
             Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount
+        </div>
             <div class="MenuTrang">
 
                 @Html.PagedListPager(Model, page => Url.Action("DienThoai", new { page = page }))
@@ -43,8 +43,6 @@
                     display: inline;
                 }
             </style>
-        </div>
-        </div>
 
     </div>
 

@@ -63,5 +63,85 @@ namespace Web_Mobile.Controllers
             else
                 return View(data.Admins.ToList());
         }
+        [HttpGet]
+        public ActionResult Create()
+        {
+            if (Session["Taikhoanadmin"] == null)
+                return RedirectToAction("Login", "Admin");
+            else
+                return View();
+        }
+        [HttpPost]
+        public ActionResult Create(Admin admin)
+        {
+            if (Session["Taikhoanadmin"] == null)
+                return RedirectToAction("Login", "Admin");
+            else
+            {
+                data.Admins.InsertOnSubmit(admin);
+                data.SubmitChanges();
+                return RedirectToAction("TaiKhoan");
+            }
+        }
+        public ActionResult Details(string id)
+        {
+            if (Session["Taikhoanadmin"] == null)
+                return RedirectToAction("Login", "Admin");
+            else
+            {
+                var admin = from s in data.Admins where s.UserAdmin == id select s;
+                return View(admin.SingleOrDefault());
+            }
+        }
+
+        [HttpGet]
+        public ActionResult Delete(string id)
+        {
+            if (Session["Taikhoanadmin"] == null)
+                return RedirectToAction("Login", "Admin");
+            else
+            {
+                var admin = from s in data.Admins where s.UserAdmin == id select s;
+                return View(admin.SingleOrDefault());
+            }
+        }
+        [HttpPost, ActionName("Delete")]
+        public ActionResult Xacnhanxoa(string id)
+        {
+            if (Session["Taikhoanadmin"] == null)
+                return RedirectToAction("Login", "Admin");
+            else
+            {
+                Admin admin = data.Admins.SingleOrDefault(n => n.UserAdmin == id);
+                data.Admins.DeleteOnSubmit(admin);
+                data.SubmitChanges();
+                return RedirectToAction("TaiKhoan");
+            }
+        }
+        [HttpGet]
+        public ActionResult Edit(string id)
+        {
+            if (Session["Taikhoanadmin"] == null)
+                return RedirectToAction("Login", "Admin");
+            else
+            {
+                var admin = from s in data.Admins where s.UserAdmin == id select s;
+                return View(admin.SingleOrDefault());
+            }
+        }
+
+        [HttpPost, ActionName("Edit")]
+        public ActionResult Xacnhansua(string id)
+        {
+            if (Session["Taikhoanadmin"] == null)
+                return RedirectToAction("Login", "Admin");
+            else
+            {
+                Admin admin = data.Admins.SingleOrDefault(n => n.UserAdmin == id);
+                UpdateModel(admin);
+                data.SubmitChanges();
+                return RedirectToAction("TaiKhoan");
+            }
+        }
     }
 }

@@ -2,36 +2,30 @@
 @using Web_Mobile.Models
 @using PagedList.Mvc
 @model PagedList.PagedList<SanPham>
-@{
-    ViewBag.Title = "SPTheoNSX";
-    Layout = "~/Views/Shared/_LayoutUser.cshtml";
-}
-@{
-    // define format VND
-    var format = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
-
-}
+@{ ViewBag.Title = "SPTheoNSX";
+                Layout = "~/Views/Shared/_LayoutUser.cshtml"; }
+@{ // define format VND
+                var format = System.Globalization.CultureInfo.GetCultureInfo("vi-VN"); }
 <div id="page-content" class="home-page">
     <div class="container">
         <div class="heading">
             @foreach (var dt in Model)
             {
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="product">
-                        <div class="image"><a href="@Url.Action("Details", "Mobile", new { id = dt.MaSP })"><img src="~/images/@dt.HinhChinh" width="300" height="300" /></a></div>
-                        <div class="caption">
-                            <div class="name"><h3><a href="@Url.Action("Details","Mobile",new { id = dt.MaSP })">@dt.TenSP</a></h3></div>
-                            <div class="price">@String.Format(format, "{0:c0}", dt.Giaban)<span></span></div>
-                            <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
-                        </div>
-                    </div>
-                </div>
-            }
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="product">
+            <div class="image"><a href="@Url.Action("Details", "Mobile", new { id = dt.MaSP })"><img src="~/images/@dt.HinhChinh" width="300" height="300" /></a></div>
+            <div class="caption">
+                <div class="name"><h3><a href="@Url.Action("Details","Mobile",new { id = dt.MaSP })">@dt.TenSP</a></h3></div>
+                <div class="price">@String.Format(format, "{0:c0}", dt.Giaban)<span></span></div>
+                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
+            </div>
         </div>
-        <div class="row"
-        <div class="heading">
+    </div>}
+        </div>
+        <div style="clear:both">
             @* Tao liên kết các trang  *@
             Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount
+        </div>
             <div class="MenuTrang">
 
                 @Html.PagedListPager(Model, page => Url.Action("DienThoai", new { page = page }))
@@ -41,9 +35,5 @@
                     display: inline;
                 }
             </style>
-        </div>
-        </div>
-
     </div>
-
 </div>

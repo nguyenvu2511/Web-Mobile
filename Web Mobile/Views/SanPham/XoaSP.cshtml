@@ -1,0 +1,116 @@
+﻿@model Web_Mobile.Models.SanPham
+
+@{
+    ViewBag.Title = "XoaSP";
+    Layout = "~/Views/Shared/_LayoutAdnin.cshtml";
+}
+
+<h2>Xác Nhận Thông Tin Sản Phẩm Cần Xóa</h2>
+
+
+<h3>Bạn quyết định xóa sản phẩm này</h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên Sản Phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            Gía Bán
+        </dt>
+
+        <dd>
+            @string.Format("{0:0,0}", Model.Giaban) VNĐ
+        </dd>
+
+        <dt>
+            Mô Tả
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mota)
+        </dd>
+
+        <dt>
+            Hình Sản Phẩm
+        </dt>
+
+        <dd>
+            <img src="@Url.Content("~/images/"+ Model.HinhChinh)" width="200" />
+        </dd>
+
+        <dt>
+            Hình 1
+        </dt>
+
+        <dd>
+            <img src="@Url.Content("~/images/"+ Model.Hinh1)" width="200" />
+        </dd>
+
+        <dt>
+            Hình 2
+        </dt>
+
+        <dd>
+            <img src="@Url.Content("~/images/"+ Model.Hinh2)" width="200" />
+        </dd>
+
+        <dt>
+            Hình 3
+        </dt>
+
+        <dd>
+            <img src="@Url.Content("~/images/"+ Model.Hinh3)" width="200" />
+        </dd>
+
+        <dt>
+            Hình 4
+        </dt>
+        <dt>
+            Ngày cập Nhập
+        </dt>
+
+        <dd>
+            @string.Format("{0:dd/MM/yyyy}", Model.Ngaycapnhat)
+        </dd>
+
+        <dt>
+            Số Lượng Tồn
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soluongton)
+        </dd>
+
+        <dt>
+            Mã LSP
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaLSP)
+        </dd>
+
+        <dt>
+            Mã NSX
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaNSX)
+        </dd>
+    </dl>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-success" /> |
+            @Html.ActionLink("Trở Về", "QuanLySanPham")
+        </div>
+    }
+</div>

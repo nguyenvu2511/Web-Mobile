@@ -198,9 +198,9 @@
             <div class="slimscroll-menu">
 
                 <!-- LOGO -->
-                <a href="index.html" class="logo text-center mb-4">
+                <a href="@Url.Action("index","Admin")" class="logo text-center mb-4">
                     <span class="logo-lg">
-                        <img src="~/images/logodt2.png" width="120px" />
+                        <img src="~/images/logodt2.png" width="120" />
                     </span>
                     <span class="logo-sm">
                         <img src="~/asset/images/logo-sm.png" alt="" height="24">
@@ -215,7 +215,7 @@
                         <li class="menu-title">Quản Lý</li>
 
                         <li>
-                            <a href="@Url.Action("Index","SanPham")">
+                            <a href="@Url.Action("QuanLySanPham","SanPham")">
                                 <i class="fe-grid"></i>
                                 <span> Sản Phẩm </span>
                             </a>
@@ -245,6 +245,12 @@
                             <a href="@Url.Action("Index","DonHang")">
                                 <i class="fe-shopping-cart"></i>
                                 <span> Đơn Hàng </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index","CTDonHang")">
+                                <i class="fe-edit"></i>
+                                <span>Chi Tiết Đơn Hàng </span>
                             </a>
                         </li>
                         <li>
@@ -322,6 +328,6 @@
 
     <!-- App js -->
     <script src="~/asset/js/app.min.js"></script>
-
+    <script src="~/ckeditor/ckeditor.js"></script>
 </body>
 </html>

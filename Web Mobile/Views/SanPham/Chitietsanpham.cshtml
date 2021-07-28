@@ -1,0 +1,106 @@
+﻿@model Web_Mobile.Models.SanPham
+
+@{
+    ViewBag.Title = "Chitietsanpham";
+    Layout = "~/Views/Shared/_LayoutAdnin.cshtml";
+}
+
+<h2>Chi Tiết Sản Phẩm</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên Sản Phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            Gía Bán
+        </dt>
+
+        <dd>
+            @string.Format("{0:0,0}", Model.Giaban) VNĐ
+        </dd>
+
+        <dt>
+            Mô Tả
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mota)
+        </dd>
+
+        <dt>
+            Hình Sản Phẩm
+        </dt>
+
+        <dd>
+            <img src="@Url.Content("~/images/"+ Model.HinhChinh)" width="200" />
+        </dd>
+
+        <dt>
+            Hình 1
+        </dt>
+
+        <dd>
+            <img src="@Url.Content("~/images/"+ Model.Hinh1)" width="200" />
+        </dd>
+
+        <dt>
+            Hình 2
+        </dt>
+
+        <dd>
+            <img src="@Url.Content("~/images/"+ Model.Hinh2)" width="200" />
+        </dd>
+
+        <dt>
+            Hình 3
+        </dt>
+
+        <dd>
+            <img src="@Url.Content("~/images/"+ Model.Hinh3)" width="200" />
+        </dd>
+        <dt>
+            Ngày cập Nhập
+        </dt>
+
+        <dd>
+            @string.Format("{0:dd/MM/yyyy}", Model.Ngaycapnhat)
+        </dd>
+
+        <dt>
+            Số Lượng Tồn
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soluongton)
+        </dd>
+
+        <dt>
+            Mã LSP
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaLSP)
+        </dd>
+
+        <dt>
+            Mã NSX
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaNSX)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa Thông Tin Sản Phẩm", "SuaSP", new { id = Model.MaSP }) |
+    @Html.ActionLink("Trở về", "QuanLySanPham")
+</p>
