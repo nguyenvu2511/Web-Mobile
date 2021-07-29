@@ -27,7 +27,7 @@ namespace Web_Mobile.Controllers
             else
             {
                 var dh = from s in data.CHITIETDONTHANGs where s.MaDH == id select s;
-                return View(dh.SingleOrDefault());
+                return View(dh.FirstOrDefault());
             }
         }
         [HttpPost, ActionName("Delete")]
@@ -37,7 +37,7 @@ namespace Web_Mobile.Controllers
                 return RedirectToAction("Login", "Admin");
             else
             {
-                CHITIETDONTHANG dh = data.CHITIETDONTHANGs.SingleOrDefault(n => n.MaDH == id);
+                CHITIETDONTHANG dh = data.CHITIETDONTHANGs.FirstOrDefault(n => n.MaDH == id);
                 data.CHITIETDONTHANGs.DeleteOnSubmit(dh);
                 data.SubmitChanges();
                 return RedirectToAction("Index");
@@ -52,7 +52,7 @@ namespace Web_Mobile.Controllers
             else
             {
                 var dh = from s in data.CHITIETDONTHANGs where s.MaDH == id select s;
-                return View(dh.SingleOrDefault());
+                return View(dh.FirstOrDefault());
             }
         }
         [HttpPost, ActionName("Edit")]
@@ -75,7 +75,7 @@ namespace Web_Mobile.Controllers
             else
             {
                 var dh = from s in data.CHITIETDONTHANGs where s.MaDH == id select s;
-                return View(dh.SingleOrDefault());
+                return View(dh.FirstOrDefault());
             }
         }
     }

@@ -83,7 +83,7 @@
                             <div class="price" style="color:red">@String.Format(format, "{0:c0}", Model.Giaban)</div>
                             <div class="featured-promotion"><p><strong>[Đặt hàng từ 27/07&nbsp;- 07/08]&nbsp;</strong>Giá giảm chỉ còn từ&nbsp;<span style="color: rgb(255, 0, 0);"><strong>@String.Format(format, "{0:c0}", (Model.Giaban - 500000))</strong></span><em>*Số lượng có hạn</em></p></div>
                             <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></div>
-                            <div class="well"><label>Số Lượng: </label> <input class="form-inline quantity" type="text" value="1"><a href="@Url.Action("Themgiohang","Giohang", new { id=@Model.MaSP,  strURL= Request.Url.ToString()})" class="btn btn-2 ">MUA NGAY</a></div>
+                            <div class="well"><a href="@Url.Action("Themgiohang","Giohang", new { id=@Model.MaSP,  strURL= Request.Url.ToString()})" class="btn btn-2 ">MUA NGAY</a></div>
 
                         </div>
                     </div>

@@ -46,17 +46,15 @@
                     <ul class="top-link">
                         @if (Session["TaiKhoan"] != null)
                         {
-                            
-                            <li><a><span class="glyphicon glyphicon-user"></span> @Html.ActionLink("Đăng Xuất", "DangXuat", "NguoiDung") </a></li>
-                            }
-                            else
-                            {
-                            <li><a><span class="glyphicon glyphicon-user"></span>@Html.ActionLink("Đăng Nhập", "DangNhap", "NguoiDung") </a></li>
-                            <li><a><span class="glyphicon glyphicon-user"></span>@Html.ActionLink("Đăng Ký", "DangKy", "NguoiDung") </a></li>
-                            }
 
-                            <li><a><span class="glyphicon glyphicon-envelope"></span> @Html.ActionLink("Liên Hệ", "Contact", "Mobile")</a></li>
-                        </ul>
+            <li><a><span class="glyphicon glyphicon-user"></span> @Html.ActionLink("Đăng Xuất", "DangXuat", "NguoiDung") </a></li> }
+                        else
+                        {
+            <li><a><span class="glyphicon glyphicon-user"></span>@Html.ActionLink("Đăng Nhập", "DangNhap", "NguoiDung") </a></li>
+                            <li><a><span class="glyphicon glyphicon-user"></span>@Html.ActionLink("Đăng Ký", "DangKy", "NguoiDung") </a></li>}
+
+                        <li><a><span class="glyphicon glyphicon-envelope"></span> @Html.ActionLink("Liên Hệ", "Contact", "Mobile")</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
